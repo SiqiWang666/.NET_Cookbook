@@ -1,0 +1,37 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeNotebook", "PracticeNotebook\PracticeNotebook.csproj", "{F7E04021-2A02-462C-9490-4880130E9C55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeNotebook.Data.Repository", "PracticeNotebook.Data.Repository\PracticeNotebook.Data.Repository.csproj", "{4095F9C8-F8EE-4FF4-8909-EF96F5EBF9CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeNotebook.Services", "PracticeNotebook.Services\PracticeNotebook.Services.csproj", "{8E179668-0185-4F20-9113-91DDF6E7D447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeNotebook.Model", "PracticeNotebook.Model\PracticeNotebook.Model.csproj", "{8E15020D-84A3-4EC0-81B5-3F0F63253E60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7E04021-2A02-462C-9490-4880130E9C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E04021-2A02-462C-9490-4880130E9C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E04021-2A02-462C-9490-4880130E9C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E04021-2A02-462C-9490-4880130E9C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4095F9C8-F8EE-4FF4-8909-EF96F5EBF9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4095F9C8-F8EE-4FF4-8909-EF96F5EBF9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4095F9C8-F8EE-4FF4-8909-EF96F5EBF9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4095F9C8-F8EE-4FF4-8909-EF96F5EBF9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E179668-0185-4F20-9113-91DDF6E7D447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E179668-0185-4F20-9113-91DDF6E7D447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E179668-0185-4F20-9113-91DDF6E7D447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E179668-0185-4F20-9113-91DDF6E7D447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E15020D-84A3-4EC0-81B5-3F0F63253E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E15020D-84A3-4EC0-81B5-3F0F63253E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E15020D-84A3-4EC0-81B5-3F0F63253E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E15020D-84A3-4EC0-81B5-3F0F63253E60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
