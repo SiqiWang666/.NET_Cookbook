@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using PracticeNotebook.Model;
 using System.Data.SqlClient;
 
@@ -7,6 +8,12 @@ namespace PracticeNotebook.Data.Repository
 {
     public class StuRepository : IRepository<Student>
     {
+        private DBHelper _dbHelper;
+
+        public StuRepository()
+        {
+            _dbHelper = new DBHelper();
+        }
         /*
          * todo [review-6/29/2020]
          * connect to sql server: server name + authentication + database name = connection string
@@ -21,6 +28,70 @@ namespace PracticeNotebook.Data.Repository
          * Repository: interaction with database
          * Service: logic
          */
+        public int Insert(Student obj)
+        {
+            string cmd = "INSERT INTO Student VALUES (@name, @mobile)";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@name", obj.SName);
+            parameters.Add("@mobile", obj.Mobile);
+            return _dbHelper.ExecuteDMLStatement(cmd, parameters);
+        }
+
+        public int Update(Student obj)
+        {
+            string cmd = "UPDATE Student SET SName=@name, Mobile=@mobile WHERE Id=@id";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@id", obj.Id);
+            parameters.Add("@name", obj.SName);
+            parameters.Add("@mobile", obj.Mobile);
+            return _dbHelper.ExecuteDMLStatement(cmd, parameters);
+        }
+
+        public int Delete(int id)
+        {
+            string cmd = "DELETE Student WHERE Id=@id";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@id", id);
+            return _dbHelper.ExecuteDMLStatement(cmd, parameters);
+        }
+
+        // todo futher optimization
+        public Student GetById(int id)
+        {
+            string cmd = "SELECT Id,SName,Mobile FROM Student WHERE Id=@id";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@id", id);
+            DataTable table = _dbHelper.GetData(cmd, parameters);
+            Student student = new Student();
+            foreach (DataRow row in table.Rows)
+            {
+                student.Id = Convert.ToInt32(row["Id"]);
+                student.SName = Convert.ToString(row["SName"]);
+                student.Mobile = Convert.ToString(row["Mobile"]);
+            }
+
+            return student;
+        }
+
+        public IEnumerable<Student> GetAll()
+        {
+            List<Student> collection = new List<Student>();
+            String cmd = "SELECT Id, SName, Mobile FROM Student";
+            DataTable table = _dbHelper.GetData(cmd, null);
+            foreach (DataRow row in table.Rows)
+            {
+                collection.Add(new Student
+                {
+                    Id = Convert.ToInt32(row["Id"]),
+                    SName = Convert.ToString(row["Sname"]),
+                    Mobile = Convert.ToString(row["Mobile"])
+                });
+            }
+
+            return collection;
+        }
+        /*
+         deprecated!!
         public int Insert(Student obj)
         {
             // view - server explorer - add connection - add the database
@@ -156,10 +227,6 @@ namespace PracticeNotebook.Data.Repository
             
             return collection;
         }
-        
-        /*
-         * Stored Procedure
-         * todo
-         */
+        */
     }
 }
