@@ -73,6 +73,9 @@ namespace PracticeNotebook.Data.Repository
             return student;
         }
 
+        /*
+         * The reason why we use IEnumerable because it is faster and secure because the data cannot be changed. 
+         */
         public IEnumerable<Student> GetAll()
         {
             List<Student> collection = new List<Student>();
