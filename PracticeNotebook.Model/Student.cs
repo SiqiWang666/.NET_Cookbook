@@ -4,6 +4,6 @@ namespace PracticeNotebook.Model
     {
         public int Id { get; set; }
         public string SName { get; set; }
-        public string Major { get; set; }
+        public string Mobile { get; set; }
     }
 }
