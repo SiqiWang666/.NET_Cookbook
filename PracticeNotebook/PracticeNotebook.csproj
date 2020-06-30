@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PracticeNotebook.Data.Repository\PracticeNotebook.Data.Repository.csproj" />
+    <ProjectReference Include="..\PracticeNotebook.Model\PracticeNotebook.Model.csproj" />
+    <ProjectReference Include="..\PracticeNotebook.Services\PracticeNotebook.Services.csproj" />
+  </ItemGroup>
+
 </Project>
