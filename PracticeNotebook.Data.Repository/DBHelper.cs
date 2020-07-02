@@ -17,7 +17,7 @@ namespace PracticeNotebook.Data.Repository
         {
             // install ConfigurationManager from Nuget
             SqlConnection connection =
-                new SqlConnection(ConfigurationManager.ConnectionStrings["local"].ConnectionString);
+                new SqlConnection(ConfigurationManager.ConnectionStrings["Demo"].ConnectionString);
             int res = 0;
             SqlCommand command = new SqlCommand(cmd, connection);
             command.CommandType = cmdType;
@@ -51,7 +51,7 @@ namespace PracticeNotebook.Data.Repository
             // Need to put the result to the DataTable because the reader will be closed when the connection is closed.
             DataTable dt = new DataTable();
             SqlConnection connection =
-                new SqlConnection(ConfigurationManager.ConnectionStrings["local"].ConnectionString);
+                new SqlConnection(ConfigurationManager.ConnectionStrings["Demo"].ConnectionString);
             SqlCommand command = new SqlCommand(cmd, connection);
             if (parameters != null)
             {
