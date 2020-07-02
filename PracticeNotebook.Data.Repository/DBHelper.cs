@@ -14,6 +14,7 @@ namespace PracticeNotebook.Data.Repository
          */
         public int ExecuteDMLStatement(String cmd, Dictionary<string, object> parameters, CommandType cmdType = CommandType.Text)
         {
+            // install ConfigurationManager from Nuget
             SqlConnection connection =
                 new SqlConnection("Server=127.0.0.1,1433;Database=Demo;User=sa;Password=MSSQLserver$666;");
             int res = 0;
@@ -39,6 +40,7 @@ namespace PracticeNotebook.Data.Repository
             finally
             {
                 connection.Close();
+                connection.Dispose(); // becuase database connection is not under the control of garbage collection.
             }
             return res;
         }
@@ -63,6 +65,7 @@ namespace PracticeNotebook.Data.Repository
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 dt.Load(reader);
+                reader.Close();
             }
             catch (Exception e)
             {
@@ -71,6 +74,7 @@ namespace PracticeNotebook.Data.Repository
             finally
             {
                 connection.Close();
+                connection.Dispose(); // Alternatively, `using` method will automatically call dispose method
             }
 
             return dt;
