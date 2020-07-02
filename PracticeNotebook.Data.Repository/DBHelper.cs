@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace PracticeNotebook.Data.Repository
 {
@@ -16,7 +17,7 @@ namespace PracticeNotebook.Data.Repository
         {
             // install ConfigurationManager from Nuget
             SqlConnection connection =
-                new SqlConnection("Server=127.0.0.1,1433;Database=Demo;User=sa;Password=MSSQLserver$666;");
+                new SqlConnection(ConfigurationManager.ConnectionStrings["local"].ConnectionString);
             int res = 0;
             SqlCommand command = new SqlCommand(cmd, connection);
             command.CommandType = cmdType;
@@ -50,7 +51,7 @@ namespace PracticeNotebook.Data.Repository
             // Need to put the result to the DataTable because the reader will be closed when the connection is closed.
             DataTable dt = new DataTable();
             SqlConnection connection =
-                new SqlConnection("Server=127.0.0.1,1433;Database=Demo;User=sa;Password=MSSQLserver$666;");
+                new SqlConnection(ConfigurationManager.ConnectionStrings["local"].ConnectionString);
             SqlCommand command = new SqlCommand(cmd, connection);
             if (parameters != null)
             {
