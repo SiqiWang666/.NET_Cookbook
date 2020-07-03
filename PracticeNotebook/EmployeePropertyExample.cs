@@ -3,22 +3,23 @@ namespace PracticeNotebook
 {
     public class EmployeePropertyExample
     {
-        private int id;
+        private int _Id;
 
-        // no parenthesis
+        // manually created property. Have to create explicit backing fields, in this case `_Id`
         public int Id
         {
             get
             {
-                return id;
+                return _Id;
             }
             set
             {
                 // value keyword
-                id = value;
+                _Id = value;
             }
         }
 
+        // auto-implemented property. Compiler will create the backing field.
         public string EName { get; set; }
 
         public decimal Salary { get; set; }
