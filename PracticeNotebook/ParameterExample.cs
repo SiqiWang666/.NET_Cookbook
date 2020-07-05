@@ -4,10 +4,6 @@ namespace PracticeNotebook
 {
     public class ParameterExample
     {
-        public ParameterExample()
-        {
-        }
-
         /// <summary>
         /// Passing By value is the default mode of parameters. A copy of the actual parameter
         ///   is passed to the function;
@@ -60,13 +56,35 @@ namespace PracticeNotebook
 
         
         /*
-         * todo [review-6/29/2020]
+         * todo [implicitly typed variables-6/29/2020]
          * dynamic type
          * `var` keyword. `dynamic` keyword
-         *  `var` will figure out the type during compile time;
+         *  `var`: Compiler will figure out the type during compile time;
          *  `dynamic` will figure out the type during runtime;
          * anonymous type
          *  var name = new {} //property is read-only
          */
+
+        public static void ImplicitType()
+        {
+            var i = 34;
+            Console.WriteLine($"This is a print of implicit type variable: {i}");
+            var arr = new[] {"a", "b", "c"};
+            Console.WriteLine($"This is a print of implicitly typed arr......");
+            foreach (var j in arr)
+            {
+                Console.Write(j + " ");
+            }    
+
+            // Raise Error: Because the type of the variable is inferred from the initialization. So the variable MUST be declared with an initialization.
+            // var v;
+            // v = 3;
+            
+            int[] nums = {1, 2, 3, 4, 5};
+
+            // Raise Error: Because the type of the variable is inferred from the type of the expression used to initialize it (the initializer). (Initializer = create an object + init values)
+            //var secondNums = {1, 2, 3, 4, 5};
+            var secondNums = new[] {1, 2, 3, 4, 5};
+        }
     }
 }
