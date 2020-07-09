@@ -10,8 +10,7 @@ namespace PracticeNotebook.ORM
     public class StudentRepository
     {
         /*
-         * Dapper is an open-source maintained by stackoverflow.
-         *  Dapper is a popular micro ORM.
+         * Dapper is an open-source maintained by stackoverflow. Dapper is a popular micro ORM.
          *
          * 1. Create IDbConnection object. (Perform CRUD operation directly using IDbConnection object)
          * 2. Write a query to perform CRUD operations.
@@ -80,16 +79,10 @@ namespace PracticeNotebook.ORM
         }
         #endregion
 
-        #region complex mapping using Dapper
+        #region multi-mapping
 
         // todo [implementation needed]
-        /*
-         * Query multi-mapping
-         * many-to-many relationship
-         * one-to-many, Employee-Department
-         *   List<Employee> in department model
-         *   Department filed in empoyee model
-         */
+        
 
         #endregion
         
