@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Be aware of: there is only one single root in the xml file.-->
+<courses>
+    <course id="1">
+        <name>Data Structure</name>
+        <number>6101</number>
+        <capacity>50</capacity>
+        <decription>
+            <title>Required Course</title>
+            <level>Graduate level</level>
+        </decription>
+    </course>
+
+    <course id="2">
+        <name>Algorithm</name>
+        <number>6110</number>
+        <capacity>80</capacity>
+        <decription>
+            <title>Elective Course</title>
+            <level>Undergraduate level</level>
+        </decription>
+    </course>
+
+    <course id="3">
+        <name>Operating System</name>
+        <number>6220</number>
+        <capacity>130</capacity>
+    </course>
+
+    <course id="4">
+        <name>Computer Network</name>
+        <number>6222</number>
+        <capacity>30</capacity>
+    </course>
+</courses>
