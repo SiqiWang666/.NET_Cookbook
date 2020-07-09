@@ -145,6 +145,7 @@ namespace PracticeNotebook.LINQ
         {
             var query = from p in _professors
                 group p by p.city
+                // a collection of objects with the same key
                 into pGroup
                 select new {pGroup.Key, count = pGroup.Count()};
             var collectionMethod = _professors.GroupBy(p => p.city).Select(pGroup => new {pGroup.Key, Count = pGroup.Count()});
@@ -265,7 +266,7 @@ namespace PracticeNotebook.LINQ
         #endregion
 
         #region Aggregate 
-        // todo 
+        // todo [implementation]
         // max, min, average, sum, aggregate
         public void GetProfessorCount()
         {
@@ -286,7 +287,7 @@ namespace PracticeNotebook.LINQ
         async void DisplayAll()
         {
             var collection = await GetAllAsync();
-            // todo question? two threads that execute two async function each. two async functions execute in a single thread.
+            // todo question? two threads that execute two async function each VS two async functions execute in a single thread.
         }
 
         #endregion
