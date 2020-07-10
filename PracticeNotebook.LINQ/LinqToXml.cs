@@ -16,9 +16,11 @@ namespace PracticeNotebook.LINQ
             var solutionDirPath = Directory.GetParent(Environment.CurrentDirectory).Parent;
             if (solutionDirPath != null) solutionDirPath = solutionDirPath.Parent;
             if (solutionDirPath != null) solutionDirPath = solutionDirPath.Parent;
-            
-            string path = Path.Combine((solutionDirPath is null ? "" : Convert.ToString(solutionDirPath)) ?? throw new FileNotFoundException(), "PracticeNotebook.LINQ", "Course.xml");
+            // null-coalescing operator: ??
+            // null-coalescing assignment operator: ??=
+            string path = Path.Combine(Convert.ToString(solutionDirPath) ?? throw new FileNotFoundException(), "PracticeNotebook.LINQ", "Course.xml");
             XDocument document = XDocument.Load(path);
+            // null condition operators: ?. or ?[]
             var listOfCourse = document.Descendants("course").Select(x => x.Attribute("id")?.Value + ", " + x.Element("name")?.Value);
             
             // todo [question - has been solved]
