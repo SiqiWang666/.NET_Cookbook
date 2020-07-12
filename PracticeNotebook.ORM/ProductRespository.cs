@@ -1,6 +1,9 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using Dapper;
 using PracticeNotebook.Model;
 
@@ -30,6 +33,24 @@ namespace PracticeNotebook.ORM
             {
                 Console.WriteLine(e.Message);
                 throw;
+            }
+        }
+
+        public IEnumerable<Product> GetAllSync()
+        {
+            string query = @"SELECT p.ProductName, p.UnitPrice FROM Products p";
+            using (IDbConnection conn = DBHelper.NorthwindConnection)
+            {
+                return conn.Query<Product>(query);
+            }
+        }
+
+        public async Task<IEnumerable<Product>> GetAllAsync()
+        {
+            string query = @"SELECT p.ProductName, p.UnitPrice FROM Products p";
+            using (IDbConnection conn = DBHelper.NorthwindConnection)
+            {
+                return await conn.QueryAsync<Product>(query);
             }
         }
     }
