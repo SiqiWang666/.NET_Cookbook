@@ -42,6 +42,7 @@ namespace PracticeNotebook.Data.Repository
             {
                 connection.Close();
                 connection.Dispose(); // becuase database connection is not under the control of garbage collection.
+                command.Dispose();
             }
             return res;
         }
@@ -76,6 +77,7 @@ namespace PracticeNotebook.Data.Repository
             {
                 connection.Close();
                 connection.Dispose(); // Alternatively, `using` method will automatically call dispose method
+                command.Dispose();
             }
 
             return dt;
