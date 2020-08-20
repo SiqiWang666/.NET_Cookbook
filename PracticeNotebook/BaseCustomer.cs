@@ -100,12 +100,13 @@ namespace PracticeNotebook
             Console.WriteLine("This is the method defined in customer class!");
         }
         /*
-         * todo [review]
+         * todo [review - method hiding and method overloading]
          * 1. method hiding: derived class method will hide the base class method. Same method name + params, the return type may or may not be the same.
          * 2. method overriding (keyword: virtual-override): When a virtual method is called on an object, then the most derived version of the method is called
          */
 
         /*
+         * todo [samples needed - boxing and unboxing]
          * Generics
          * > boxing:conversion of a value type to reference is called boxing.
          * > unboxing: conversion of a reference to a value type is called unboxing.

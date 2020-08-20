@@ -5,8 +5,9 @@ namespace PracticeNotebook
     /*
      * Generic Type
      *  Syntax: append <T> to the class name or func name.
+     * you can assign constraints on T: where T : class | where T : struct
      */
-    public class GenericExample<T>
+    public class GenericExample<T> where T : class
     {
         public List<T> list = new List<T>();
 

@@ -30,7 +30,7 @@ namespace PracticeNotebook
         }
 
         // out parameter
-        [Obsolete(message: "fake message!", error: false)] //It is helpfule when you refactor some API.
+        [Obsolete(message: "fake message!", error: false)] //It is helpful when you refactor some API.
         public static bool IsIntEven(int i, out string msg)
         {
             if (i % 2 == 0) msg = "the input number is even.";
