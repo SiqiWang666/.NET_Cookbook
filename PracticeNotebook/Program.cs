@@ -65,7 +65,7 @@ namespace PracticeNotebook
             
             /*
              * Static
-             *  - class: only have static method. cannot be inherited. (or sealed). cannot be passed as a param.
+             *  - class: only have static method. cannot be instantiated and inherited (because static class is sealed). cannot be passed as a param.
              *  - variable: static variable is global
              *  - method:
              *    constructor: without params and you cannot call it explicitly. (init class variables)
