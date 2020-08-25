@@ -11,9 +11,12 @@ namespace PracticeNotebook.EF.Helpers
         
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
-            var logContent = formatter(state, exception);
-            Console.WriteLine();
-            Console.WriteLine(logContent);
+            if (_categoryName.Equals("Microsoft.EntityFrameworkCore.Database.Command") && logLevel == LogLevel.Information)
+            {
+                var logContent = formatter(state, exception);
+                Console.WriteLine();
+                Console.WriteLine(logContent);
+            }
         }
 
         public bool IsEnabled(LogLevel logLevel) => true;
