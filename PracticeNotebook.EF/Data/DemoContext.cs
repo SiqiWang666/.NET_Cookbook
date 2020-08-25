@@ -1,13 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using PracticeNotebook.EF.Entity;
+using PracticeNotebook.EF.Helpers;
 
 namespace PracticeNotebook.EF.Data
 {
     public partial class DemoContext : DbContext
     {
         // Define logger factory
-        public static readonly ILoggerFactory _LoggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
+        
         public DemoContext()
         {
         }
@@ -25,7 +26,9 @@ namespace PracticeNotebook.EF.Data
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseLoggerFactory(_LoggerFactory).UseSqlServer("Server=127.0.0.1,1433;Database=Demo;User=sa;Password=MSSQLserver$666;");
+                var loggerFactory = new LoggerFactory();
+                loggerFactory.AddProvider(new EfLoggerProvider());
+                optionsBuilder.UseLoggerFactory(loggerFactory).UseSqlServer("Server=127.0.0.1,1433;Database=Demo;User=sa;Password=MSSQLserver$666;");
             }
         }
 
