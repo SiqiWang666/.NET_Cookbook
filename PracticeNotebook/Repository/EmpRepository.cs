@@ -8,7 +8,7 @@ namespace PracticeNotebook.Repository
     {
         private List<Employee> listEmp = new List<Employee>()
         {
-            // TODO [Review]
+            // TODO [Review-collection initializer]
             // init with a list of anonymous objects, new ClassName{<file> = <value>, ..}
             new Employee{Id = 1, Name="Tom", Department = "Computer Science", City = "Arlington", Salary = 80000},
             new Employee{Id = 2, Name="Smith", Department = "Computer Science", City = "DC", Salary = 90000},

@@ -21,7 +21,8 @@ namespace PracticeNotebook.LINQ
         public string city { get; set; }
     }
     /*
-     * LINQ = language integrated query. It provides consistent way for querying different data source.
+     * LINQ = language integrated query. It provides consistent way (through extension methods) for querying different data source.
+     * LINQ is nothing but a collection of extenstion methods. on Ienumerable type, that means any class that implments IEnumerable will have access to all the extension methods in LINQ
      *   For example, LINQ to Objects, LINQ to database, LINQ to dataset, and XML.
      * in-memory data source: Return IEnumerable. For example arrays, list, dictionary, XML file
      * out-memory data source: Return IQueryable. For example, sql server

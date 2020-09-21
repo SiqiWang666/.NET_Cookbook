@@ -1,3 +1,5 @@
+using System;
+
 namespace PracticeNotebook.Repository
 {
     
@@ -15,8 +17,13 @@ namespace PracticeNotebook.Repository
          * Collections
          *  - Add, Insert, RemoveAt
          */
-        void Add(T obj);
+        abstract void Add(T obj);
         void Create(T obj);
+
+        public void SayHello()
+        {
+            Console.WriteLine("hello");
+        }
 
     }
 }

@@ -30,6 +30,7 @@ namespace PracticeNotebook
         }
 
         // out parameter
+        // One of the use cases of out parameter is when you want to return more than one value. 
         [Obsolete(message: "fake message!", error: false)] //It is helpful when you refactor some API.
         public static bool IsIntEven(int i, out string msg)
         {
@@ -38,7 +39,7 @@ namespace PracticeNotebook
             return i % 2 == 0;
         }
 
-        // variable sized parameters
+        // variable sized parameters preceded by the `params` keyword and must be put at the very end of parameters.
         public static int AddNumbers(params int[] num)
         {
             int sum = 0;

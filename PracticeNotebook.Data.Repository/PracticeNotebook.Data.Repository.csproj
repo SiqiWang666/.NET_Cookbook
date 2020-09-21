@@ -9,7 +9,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
       <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+      <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
     </ItemGroup>
 
 </Project>

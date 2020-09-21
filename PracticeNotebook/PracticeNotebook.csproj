@@ -6,9 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PracticeNotebook.Dapper\PracticeNotebook.Dapper.csproj" />
     <ProjectReference Include="..\PracticeNotebook.Data.Repository\PracticeNotebook.Data.Repository.csproj" />
+    <ProjectReference Include="..\PracticeNotebook.EF\PracticeNotebook.EF.csproj" />
+    <ProjectReference Include="..\PracticeNotebook.LINQ\PracticeNotebook.LINQ.csproj" />
     <ProjectReference Include="..\PracticeNotebook.Model\PracticeNotebook.Model.csproj" />
     <ProjectReference Include="..\PracticeNotebook.Services\PracticeNotebook.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
   </ItemGroup>
 
 </Project>
