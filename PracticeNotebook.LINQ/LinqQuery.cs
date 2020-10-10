@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace PracticeNotebook.LINQ
 {
@@ -279,16 +278,31 @@ namespace PracticeNotebook.LINQ
 
         #region Async-query
         // The return type of async method is Task.
+        private async Task<List<Professor>> GetProfessors()
+        {
+            return await Task.FromResult(new List<Professor>
+            {
+                new Professor {name = "Tim", salary = 90000m, age = 25, city = "DC"},
+                new Professor {name = "William", salary = 90000m, age = 45, city = "DC"},
+                new Professor {name = "Tom", salary = 50000m, age = 25, city = "LA"},
+                new Professor {name = "Jason", salary = 100000m, age = 45, city = "LA"},
+                new Professor {name = "Zhang", salary = 70000m, age = 30, city = "DC"},
+                new Professor {name = "Wood", salary = 80000m, age = 45, city = "DC"},
+                new Professor {name = "Ethan", salary = 60000m, age = 35, city = "Seattle"},
+                new Professor {name = "Pod", salary = 110000m, age = 50, city = "DC"},
+            });
+        }
+
         public async Task<IEnumerable<Professor>> GetAllAsync()
         {
-            var collection = _professors.Select(x => x);
-            return collection;
+            var collection = GetProfessors();
+
+            return await collection;
         }
 
         async void DisplayAll()
         {
-            var collection = await GetAllAsync();
-            // todo question? two threads that execute two async function each VS two async functions execute in a single thread.
+            await GetAllAsync();
         }
 
         #endregion
