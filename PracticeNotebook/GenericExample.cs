@@ -15,7 +15,7 @@ namespace PracticeNotebook
         {
             list.Add(item);
         }
-        public bool Sum<T>(T a, T b)
+        public bool Sum(T a, T b)
         {
             return a.Equals(b);
         }
