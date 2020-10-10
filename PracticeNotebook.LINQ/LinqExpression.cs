@@ -12,7 +12,7 @@ namespace PracticeNotebook.LINQ
             // var jsonStr = File.ReadAllText(filePath);
             // var jsonDocument = JsonDocument.Parse(jsonStr);
             // Console.WriteLine(jsonDocument);
-            var name = nameof(filePath);
+            //var name = nameof(filePath);
         }
     }
 }
