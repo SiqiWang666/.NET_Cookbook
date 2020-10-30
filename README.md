@@ -1,22 +1,22 @@
-# .NET-Samples
+# .NET_Cookbook
 
-This repo contains full samples including basic and advanced language features in c# 3.0, ADO.NET, LINQ, Dapper and ASP.NET core framework.
+This repo contains sample codes of basic and advanced language features in c#, ADO.NET, LINQ, Dapper and ASP.NET core framework.
 
 ### Environment
 
-.NET Core SDK: 3.1 and Rider
+.NET Core 3.1 and Rider
 
 ### Struction
 
 ```bash
 .
 ├── LICENSE
-├── PracticeNotebook  #basic and advanced language features in c# 3.0
-├── PracticeNotebook.Data.Repository  #Ado.NET
-├── PracticeNotebook.LINQ             #LINQ queries
-├── PracticeNotebook.Model            #Ado.NET
-├── PracticeNotebook.ORM              #Dapper
-├── PracticeNotebook.Services         #Ado.NET
+├── PracticeNotebook  # console project with basic and advanced language features in c#
+├── PracticeNotebook.Data.Repository  # Ado.NET examples
+├── PracticeNotebook.LINQ             # LINQ queries examples
+├── PracticeNotebook.Model            # shared DTO
+├── PracticeNotebook.ORM              # Dapper examples
+├── PracticeNotebook.Services         # Ado.NET examples
 └── README.md
 ```
 
