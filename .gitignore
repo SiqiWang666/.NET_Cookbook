@@ -31,3 +31,6 @@ msbuild.wrn
 # IDE
 .vs/
 .idea/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
