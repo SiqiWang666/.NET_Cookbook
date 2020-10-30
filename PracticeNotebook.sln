@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeNotebook.Algorithms
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeNotebook.EF", "PracticeNotebook.EF\PracticeNotebook.EF.csproj", "{1168C194-1AA1-481D-85FC-C5AD767691AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeNotebook.CSharpLanguage", "PracticeNotebook.CSharpLanguage\PracticeNotebook.CSharpLanguage.csproj", "{0B0FAB4E-9DBF-4465-8EC0-C64D1E698691}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{1168C194-1AA1-481D-85FC-C5AD767691AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1168C194-1AA1-481D-85FC-C5AD767691AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1168C194-1AA1-481D-85FC-C5AD767691AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B0FAB4E-9DBF-4465-8EC0-C64D1E698691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0FAB4E-9DBF-4465-8EC0-C64D1E698691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B0FAB4E-9DBF-4465-8EC0-C64D1E698691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B0FAB4E-9DBF-4465-8EC0-C64D1E698691}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
