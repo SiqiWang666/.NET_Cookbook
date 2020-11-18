@@ -25,7 +25,6 @@ namespace PracticeNotebook.EF.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 var loggerFactory = new LoggerFactory();
                 loggerFactory.AddProvider(new EfLoggerProvider());
                 optionsBuilder.UseLoggerFactory(loggerFactory).UseSqlServer("Server=127.0.0.1,1433;Database=Demo;User=sa;Password=MSSQLserver$666;");

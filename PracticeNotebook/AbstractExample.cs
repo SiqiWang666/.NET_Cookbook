@@ -20,7 +20,7 @@ namespace PracticeNotebook
         }
     }
 
-    public class ConcreteClass<T> : AbstractExample
+    public class ConcreteClass : AbstractExample
     {
         public override object GetMax<T>(params T[] num)
         {
